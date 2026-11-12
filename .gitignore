@@ -1,0 +1,16 @@
+# Compiled executable
+mypreprocessor
+test_include
+test_function
+test_multi
+
+# Object files
+*.o
+
+# Generated preprocessor output
+*.i
+
+# Temporary and backup files
+*_old.c
+*_old.h
+*~
