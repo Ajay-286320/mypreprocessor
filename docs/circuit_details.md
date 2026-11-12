@@ -44,3 +44,12 @@ In the context of the curriculum guidelines requiring hardware verification:
    - The process reads from flash/disk storage via `fopen()`.
    - Utilizes RAM-backed temporary streams (`tmpfile()`) for low-latency multi-pass parsing.
    - Outputs the generated `.i` file to the target filesystem.
+
+---
+
+## 4. Terminal Verification Evidence
+
+Below is the verified build, execution, and output inspection captured directly in the Ubuntu Linux terminal environment on `system2` (`v26be1a8@system2`):
+
+![Terminal Verification Screenshot](images/terminal_output.png)
+

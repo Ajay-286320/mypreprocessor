@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 840" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #300a24; }
+      .header { fill: #210a1a; }
+      .tab { fill: #3c1230; stroke: #551e44; stroke-width: 1; }
+      .border { stroke: #551e44; stroke-width: 1; }
+      .btn-close { fill: #e95420; }
+      .btn-min { fill: #646464; }
+      .btn-max { fill: #646464; }
+      .tab-title { font-family: 'Ubuntu Mono', 'Consolas', 'DejaVu Sans Mono', monospace; font-size: 13px; font-weight: bold; fill: #eeeeec; }
+      .term-text { font-family: 'Ubuntu Mono', 'Consolas', 'DejaVu Sans Mono', monospace; font-size: 15px; }
+      .u-green { fill: #8ae234; font-weight: bold; }
+      .u-white-bold { fill: #eeeeec; font-weight: bold; }
+      .u-blue { fill: #729fcf; font-weight: bold; }
+      .u-white { fill: #eeeeec; }
+      .u-dim { fill: #888a85; }
+      .u-cyan { fill: #34e2e2; }
+      .u-yellow { fill: #fce94f; }
+      .cursor { fill: #eeeeec; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1040" height="840" rx="8" class="bg" />
+
+  <!-- Window Header -->
+  <rect width="1040" height="38" rx="8" class="header" />
+  <rect y="30" width="1040" height="8" class="header" />
+  <line x1="0" y1="38" x2="1040" y2="38" class="border" />
+
+  <!-- Window controls -->
+  <circle cx="21" cy="19" r="7" class="btn-close" />
+  <circle cx="43" cy="19" r="7" class="btn-min" />
+  <circle cx="65" cy="19" r="7" class="btn-max" />
+
+  <!-- Active Tab -->
+  <rect x="90" y="6" width="270" height="32" rx="4" class="tab" />
+  <text x="105" y="27" class="tab-title">v26be1a8@system2: ~</text>
+
+  <!-- Terminal Content -->
+  <g transform="translate(18, 62)">
+    <!-- Line 1: prompt -->
+    <text y="0" class="term-text">
+      <tspan class="u-green">v26be1a8@system2</tspan><tspan class="u-white-bold">:</tspan><tspan class="u-blue">~</tspan><tspan class="u-white-bold">$ </tspan><tspan class="u-white">cd mypreprocessor &amp;&amp; ls</tspan>
+    </text>
+
+    <!-- Line 2-4: ls output -->
+    <text y="22" class="term-text u-white">comment_removal.c  docs             macro_handler.c  Makefile</text>
+    <text y="44" class="term-text u-white">comment_removal.h  file_inclusion.c macro_handler.h  myheader.h</text>
+    <text y="66" class="term-text u-white">inputfile.c        file_inclusion.h main.c           README.md</text>
+
+    <!-- Line 5: make prompt -->
+    <text y="92" class="term-text">
+      <tspan class="u-green">v26be1a8@system2</tspan><tspan class="u-white-bold">:</tspan><tspan class="u-blue">~/mypreprocessor</tspan><tspan class="u-white-bold">$ </tspan><tspan class="u-white">make</tspan>
+    </text>
+    <text y="114" class="term-text u-white">gcc -Wall -Wextra -g main.c comment_removal.c file_inclusion.c macro_handler.c -o mypreprocessor</text>
+
+    <!-- Line 7: cat inputfile.c -->
+    <text y="140" class="term-text">
+      <tspan class="u-green">v26be1a8@system2</tspan><tspan class="u-white-bold">:</tspan><tspan class="u-blue">~/mypreprocessor</tspan><tspan class="u-white-bold">$ </tspan><tspan class="u-white">cat inputfile.c</tspan>
+    </text>
+    <text y="162" class="term-text u-white">#include &lt;stdio.h&gt;</text>
+    <text y="184" class="term-text u-white">#include "myheader.h"</text>
+    <text y="206" class="term-text u-cyan">#define PI 3.14</text>
+    <text y="228" class="term-text u-cyan">#define SQUARE(x) ((x) * (x))</text>
+    <text y="250" class="term-text u-white">int main(void)</text>
+    <text y="272" class="term-text u-white">{</text>
+    <text y="294" class="term-text u-dim">    // Example single-line comment</text>
+    <text y="316" class="term-text u-white">    int value = SQUARE(5);</text>
+    <text y="338" class="term-text u-white">    float area = PI * SQUARE(2);</text>
+    <text y="360" class="term-text u-white">    display();</text>
+    <text y="382" class="term-text u-white">    printf("value = %d, area = %f\n", value, area);</text>
+    <text y="404" class="term-text u-white">    return 0;</text>
+    <text y="426" class="term-text u-white">}</text>
+
+    <!-- Line 18: run ./mypreprocessor inputfile.c -->
+    <text y="452" class="term-text">
+      <tspan class="u-green">v26be1a8@system2</tspan><tspan class="u-white-bold">:</tspan><tspan class="u-blue">~/mypreprocessor</tspan><tspan class="u-white-bold">$ </tspan><tspan class="u-white">./mypreprocessor inputfile.c</tspan>
+    </text>
+    <text y="474" class="term-text u-green">Preprocessing completed successfully!</text>
+    <text y="496" class="term-text u-cyan">Output file: inputfile.i</text>
+
+    <!-- Line 21: cat inputfile.i -->
+    <text y="522" class="term-text">
+      <tspan class="u-green">v26be1a8@system2</tspan><tspan class="u-white-bold">:</tspan><tspan class="u-blue">~/mypreprocessor</tspan><tspan class="u-white-bold">$ </tspan><tspan class="u-white">cat inputfile.i</tspan>
+    </text>
+    <text y="544" class="term-text u-white">#include &lt;stdio.h&gt;</text>
+    <text y="566" class="term-text u-white">void display(void);</text>
+    <text y="588" class="term-text u-white">int main(void)</text>
+    <text y="610" class="term-text u-white">{</text>
+    <text y="632" class="term-text u-yellow">    int value = ((5) * (5));</text>
+    <text y="654" class="term-text u-yellow">    float area = 3.14 * ((2) * (2));</text>
+    <text y="676" class="term-text u-white">    display();</text>
+    <text y="698" class="term-text u-white">    printf("value = %d, area = %f\n", value, area);</text>
+    <text y="720" class="term-text u-white">    return 0;</text>
+    <text y="742" class="term-text u-white">}</text>
+
+    <!-- Line 30: final prompt -->
+    <text y="768" class="term-text">
+      <tspan class="u-green">v26be1a8@system2</tspan><tspan class="u-white-bold">:</tspan><tspan class="u-blue">~/mypreprocessor</tspan><tspan class="u-white-bold">$ </tspan>
+    </text>
+    <rect x="360" y="753" width="9" height="17" class="cursor" />
+  </g>
+</svg>

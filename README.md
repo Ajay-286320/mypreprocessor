@@ -153,7 +153,14 @@ Output file: inputfile.i
 
 ## Demonstration & Sample Output
 
-### Input (`inputfile.c`):
+### Terminal Execution Output
+Below is the execution of `mypreprocessor` in the Ubuntu Linux terminal environment (`v26be1a8@system2`):
+
+![Ubuntu Linux Terminal Execution](docs/images/terminal_output.png)
+
+---
+
+### Input Source Code (`inputfile.c`):
 ```c
 #include <stdio.h>
 #include "myheader.h"
